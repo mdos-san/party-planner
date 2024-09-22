@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PartyPlanner</title>
+  </head>
+
+  <body>
+    <h1>PartyPlanner</h1>
+    <form action="/home.html" onsubmit="return handleSubmit(this)">
+      <label for="login">Login</label>
+      <input id="login" type="text" />
+      <label for="password">Mot de passe</label>
+      <input id="password" type="text" />
+      <input type="submit" value="Me connecter" />
+    </form>
+    <span id="error"></span>
+    <script>
+      function handleSubmit(form) {
+        try {
+          const login = form.login.value;
+          const password = form.password.value;
+
+          // TODO: request
+          if (login === "" || password === "") {
+            throw new Error("Impossible de se connecter");
+          }
+
+          return true;
+        } catch (e) {
+          console.error(e);
+          document.getElementById("error").textContent = e.message;
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
