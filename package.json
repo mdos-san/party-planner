@@ -1,0 +1,21 @@
+{
+  "name": "@mdos-san/party-planner",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "prettier": "prettier -w 'src/**/*' 'tests/**/*'",
+    "dev": "cd src && live-server"
+  },
+  "author": "mdos-san",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.5.5",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
+}
